@@ -24,34 +24,62 @@
 |                     ,/       / _ \ | '_ \| | | |/ __/ _` / __| __|  |
 |    ,-----"-..?----_/ )      / ___ \| | | | |_| | (_| (_| \__ \ |_ _ |
 |.._(                  `----'/_/   \_\_| |_|\__, |\___\__,_|___/\__| -|
-+90S-+-----+-----+-----+-----+-----+-----+--___/ /--+-----+-----+-----+
-     Based on 1998 Map by Matthew Thomas   |____/ Hacked on 2015 by 8^/  
+| ____                              _        |___/   _ _              | 
+|/ ___|___ _ __  ___ _   _ ___     / \   _ __   __ _| (_)___  ___ _ __|
+| |   / _ \ '_ \/ __| | | / __|   / _ \ | '_ \ / _` | | / __|/ _ \ '__|
+| |__|  __/ | | \__ \ |_| \__ \  / ___ \| | | | (_| | | \__ \  __/ |  | 
+ \____\___|_| |_|___/\__,_|___/ /_/   \_\_| |_|\__,_|_|_|___/\___|_|  |
++90S-+-----+-----+-----+-----+-----+-----+-------+-----+-----+-----+
+     Based on 1998 Map by Matthew Thomas    Hacked on 2015 by 8^/  
+
+
+
 
 Version
 -------------
-1.0 first release
+anycastCensusAnalyser 1.0 first release
 
 Introduction
 -------------
-Thanks for downloading our code. It allows to analyze existing measurement 
-of our IPv4/24 anycast censuses. 
+Thanks for downloading our code. It analises the existing measurements 
+of our IPv4/24 anycast censuses, that we release to reproduxe and 
+extend results published in [2].
+
 For more information, question and dataset, please visit:
 	http://www.telecom-paristech.fr/~drossi/anycast
 
+Prerequisites
+-------------
+You need to install the Coreutils and Parallel [1] packages: 
+
+Linux Ubuntu (and derivatives): 
+apt-get install parallel
+apt-get install coreutils
+
+MAC OS:
+brew install coreutils
+brew install parallel 
+
+
+
 Installation
 -------------
-Our code should run out of the box. There is no python depenedency which 
+Our code should run out of the box. There is no python dependency which 
 we are aware of. All the code you need is in the code/ folder
 
 Usage
 -------------
- ./analyseCensus.sh censusFolder month
+ ./analyseCensus.sh censusFolder/ month
 	   mandatory:
        - censusFolder: folder containing the census measurements
        - month: month of the census
 
 example: 
-./analyseCensus.sh ../measurement/measurementCensusPL/2016-04/ 2016-04
+./analyseCensus.sh 2016-04/ 2016-04
 
 Have fun!
-Dario and Danilo
+Danilo and Dario
+
+[1] Tange, Ole. Gnu parallel-the command-line power tool. The USENIX Magazine 36.1 (2011): 42-47. APA	
+
+[2] Cicalese, Danilo and Rossi, Dario. A longitudinal study of IP Anycast. ACM SIGCOMM Computer Communication Review, 2018.
