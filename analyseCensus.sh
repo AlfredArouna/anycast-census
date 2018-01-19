@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Telecom Paristech
 # cicalese@enst.fr
@@ -22,7 +22,6 @@
 #This script analises the data from an anycast census, it requires 2 parameters
 # $1 - census folder
 # $2 - month of the census
-
 
 function help {
             echo "
@@ -57,24 +56,32 @@ main() {
     #To be safe, we copy the files in a tmp directory.
     echo "phase 0: Copying the data in a tmp directory"
     cp $(find $censusFolder | grep "\.rw") /tmp/anycastMeas
-    
+
     #removing tmp directory
     rm -f -r /tmp/anycastMeasIpLong;
     mkdir /tmp/anycastMeasIpLong;
-
-    echo "phase 1: converting the IPs in Long"
-    #some errors due to the last line (without RTT)
-    ls /tmp/anycastMeas/ | parallel -j $(nproc) 'python code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
-    
     #removing tmp directory
     rm -f -r /tmp/anycastMeasSorted;
     mkdir /tmp/anycastMeasSorted;
 
-    echo "phase 2: sorting the Long IPs"
-    for file in /tmp/anycastMeasIpLong/*; do 
-        sort --parallel=$(nproc) -n -u $file -o /tmp/anycastMeasSorted/$(basename $file); 
-    done;
-    
+    echo "phase 1: converting the IPs in Long"
+    if [ "$(uname)" == "Darwin" ]; then
+        # MAC OS
+        ls /tmp/anycastMeas/ | parallel -j $(gnproc) 'python code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
+        
+        echo "phase 2: sorting the Long IPs"
+        for file in /tmp/anycastMeasIpLong/*; do 
+            gsort --parallel=$(gnproc) -n -u $file -o /tmp/anycastMeasSorted/$(basename $file); 
+        done;
+    else
+        #LINUX
+        ls /tmp/anycastMeas/ | parallel --gnu -j $(nproc) 'python code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
+
+        echo "phase 2: sorting the Long IPs"
+        for file in /tmp/anycastMeasIpLong/*; do 
+            sort --parallel=$(nproc) -n -u $file -o /tmp/anycastMeasSorted/$(basename $file); 
+        done;
+    fi
 
     #removing tmp directory
     rm -f -r datasets/censusData;
@@ -83,15 +90,17 @@ main() {
     rm -f -r /tmp/anycastMeasIpLong;
 
     echo "phase 3: finding speed of light violation"
-    mkdir datasets/anycast-measurements-$date 
+    mkdir -p datasets/anycast-measurements-$date 
     python code/analyseCensus.py datasets/censusData/ datasets/planetlab-vps datasets/anycast-measurements-$date 
     
     echo 'phase 4: running iGreedy on the anycast IPs'
-    mkdir anycast-results-$date
+    mkdir -p anycast-results-$date
     cd code/igreedy/
+
     for file in ../../datasets/anycast-measurements-$date/*; do 
         ./igreedy -i $file -o ../../anycast-results-$date/$(basename $file)>>log-igreedy-$date;
     done;
-
+    
+    echo "Finished: results in anycast-results-$date"
 }
 main "$@"
