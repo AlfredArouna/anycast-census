@@ -1,0 +1,9 @@
+var dataPlatforms=[
+{
+    "label": "PlanetLab", 
+    "value": 100
+},
+{
+    "label": "Ripe", 
+    "value": 0
+}]

@@ -1,0 +1,684 @@
+var data=
+{
+    "allCircles": [
+        {
+            "id": "planetlab3.cesnet.cz_1453826038.rw", 
+            "latitude": 50.102, 
+            "longitude": 14.3916, 
+            "radius": 63.114201684210535
+        }, 
+        {
+            "id": "planetlab1.cesnet.cz_1453826052.rw", 
+            "latitude": 50.102, 
+            "longitude": 14.3916, 
+            "radius": 76.92043330263157
+        }, 
+        {
+            "id": "node2.planetlab.mathcs.emory.edu_1453826049.rw", 
+            "latitude": 33.7895, 
+            "longitude": -84.3255, 
+            "radius": 84.80970851315789
+        }, 
+        {
+            "id": "planetlab2.cesnet.cz_1453826051.rw", 
+            "latitude": 50.102, 
+            "longitude": 14.3916, 
+            "radius": 88.75434611842104
+        }, 
+        {
+            "id": "planetlab4.inf.ethz.ch_1453826039.rw", 
+            "latitude": 47.3794, 
+            "longitude": 8.54513, 
+            "radius": 95.65746192763159
+        }, 
+        {
+            "id": "planetlab3.inf.ethz.ch_1453826032.rw", 
+            "latitude": 47.3794, 
+            "longitude": 8.54513, 
+            "radius": 101.57441833552632
+        }, 
+        {
+            "id": "planetlab01.cs.washington.edu_1453826047.rw", 
+            "latitude": 47.6531, 
+            "longitude": -122.313, 
+            "radius": 105.51905594078946
+        }, 
+        {
+            "id": "planetlab2.koganei.itrc.net_1453826049.rw", 
+            "latitude": 35.7, 
+            "longitude": 139.767, 
+            "radius": 183.42564864473684
+        }, 
+        {
+            "id": "planetlab1.koganei.itrc.net_1453826049.rw", 
+            "latitude": 35.7, 
+            "longitude": 139.767, 
+            "radius": 187.37028625
+        }, 
+        {
+            "id": "planetlab-coffee.ait.ie_1453826039.rw", 
+            "latitude": 53.4187, 
+            "longitude": -7.90557, 
+            "radius": 229.77514050657896
+        }, 
+        {
+            "id": "planetlab-tea.ait.ie_1453826043.rw", 
+            "latitude": 53.4187, 
+            "longitude": -7.90557, 
+            "radius": 236.67825631578944
+        }, 
+        {
+            "id": "planetlab02.cs.washington.edu_1453826054.rw", 
+            "latitude": 47.6531, 
+            "longitude": -122.313, 
+            "radius": 299.792458
+        }, 
+        {
+            "id": "planetlab3.rutgers.edu_1453826038.rw", 
+            "latitude": 40.4896, 
+            "longitude": -74.4082, 
+            "radius": 356.00354387499993
+        }, 
+        {
+            "id": "pl1.rcc.uottawa.ca_1453826039.rw", 
+            "latitude": 45.4205, 
+            "longitude": -75.6813, 
+            "radius": 553.2354241381579
+        }, 
+        {
+            "id": "saturn.planetlab.carleton.ca_1453826040.rw", 
+            "latitude": 45.3847, 
+            "longitude": -75.6982, 
+            "radius": 567.0416557565788
+        }, 
+        {
+            "id": "merkur.planetlab.haw-hamburg.de_1453826038.rw", 
+            "latitude": 53.5686, 
+            "longitude": 10.0386, 
+            "radius": 573.9447715657894
+        }, 
+        {
+            "id": "planetlab6.csee.usf.edu_1453826047.rw", 
+            "latitude": 28.0587, 
+            "longitude": -82.4152, 
+            "radius": 580.8478873749999
+        }, 
+        {
+            "id": "planetlab5.csee.usf.edu_1453826047.rw", 
+            "latitude": 28.0587, 
+            "longitude": -82.4152, 
+            "radius": 581.8340467763157
+        }, 
+        {
+            "id": "planet2.servers.ua.pt_1453826042.rw", 
+            "latitude": 40.6401, 
+            "longitude": -8.65628, 
+            "radius": 583.8063655789473
+        }, 
+        {
+            "id": "planetlab1.informatik.uni-goettingen.de_1453829203.rw", 
+            "latitude": 51.3622, 
+            "longitude": 9.55996, 
+            "radius": 588.7371625855262
+        }, 
+        {
+            "id": "planetlab2.cs.ubc.ca_1453826044.rw", 
+            "latitude": 49.2637, 
+            "longitude": -123.237, 
+            "radius": 593.6679595921053
+        }, 
+        {
+            "id": "planetlab2.comp.nus.edu.sg_1453826041.rw", 
+            "latitude": 1.37, 
+            "longitude": 103.8, 
+            "radius": 674.5330305
+        }, 
+        {
+            "id": "ricepl-5.cs.rice.edu_1453826040.rw", 
+            "latitude": 29.7225, 
+            "longitude": -95.3924, 
+            "radius": 688.339262118421
+        }, 
+        {
+            "id": "planetlab2.cs.uoregon.edu_1453826042.rw", 
+            "latitude": 44.04, 
+            "longitude": -123.06, 
+            "radius": 695.2423779276315
+        }, 
+        {
+            "id": "planetlab3.cs.uoregon.edu_1453826043.rw", 
+            "latitude": 44.04, 
+            "longitude": -123.06, 
+            "radius": 699.1870155328947
+        }, 
+        {
+            "id": "planetlab1.cs.uoregon.edu_1453826042.rw", 
+            "latitude": 44.04, 
+            "longitude": -123.06, 
+            "radius": 700.1731749342105
+        }, 
+        {
+            "id": "planetlab4.cs.uoregon.edu_1453826043.rw", 
+            "latitude": 44.04, 
+            "longitude": -123.06, 
+            "radius": 710.0347689473683
+        }, 
+        {
+            "id": "planetlab3.hiit.fi_1453923778.rw", 
+            "latitude": 60.1, 
+            "longitude": 25.0, 
+            "radius": 759.3427390131579
+        }, 
+        {
+            "id": "planetlab2.inf.ethz.ch_1453826031.rw", 
+            "latitude": 47.3794, 
+            "longitude": 8.54513, 
+            "radius": 855.9863603421052
+        }, 
+        {
+            "id": "planet1.pnl.nitech.ac.jp_1453825604.rw", 
+            "latitude": 35.1566, 
+            "longitude": 136.925, 
+            "radius": 964.463894486842
+        }, 
+        {
+            "id": "planetlab1.cs.ucla.edu_1453826041.rw", 
+            "latitude": 34.0711, 
+            "longitude": -118.442, 
+            "radius": 966.4362132894735
+        }, 
+        {
+            "id": "planet2.pnl.nitech.ac.jp_1453824896.rw", 
+            "latitude": 35.1566, 
+            "longitude": 136.925, 
+            "radius": 1014.7580239539474
+        }, 
+        {
+            "id": "planetvs2.informatik.uni-stuttgart.de_1453826038.rw", 
+            "latitude": 48.7835, 
+            "longitude": 9.17517, 
+            "radius": 1040.398168388158
+        }, 
+        {
+            "id": "planetlab2.pop-mg.rnp.br_1453826041.rw", 
+            "latitude": -19.9333, 
+            "longitude": -43.95, 
+            "radius": 1072.941428631579
+        }, 
+        {
+            "id": "pl1.eng.monash.edu.au_1453826042.rw", 
+            "latitude": -37.9096, 
+            "longitude": 145.133, 
+            "radius": 1246.5054832631579
+        }, 
+        {
+            "id": "pl2.eng.monash.edu.au_1453826041.rw", 
+            "latitude": -37.9096, 
+            "longitude": 145.133, 
+            "radius": 1272.1456276973684
+        }, 
+        {
+            "id": "dannan.disy.inf.uni-konstanz.de_1453826040.rw", 
+            "latitude": 51.12, 
+            "longitude": 10.54, 
+            "radius": 1284.9656999144736
+        }, 
+        {
+            "id": "planet-lab-node1.netgroup.uniroma2.it_1453824388.rw", 
+            "latitude": 41.8556, 
+            "longitude": 12.6243, 
+            "radius": 1294.8272939276314
+        }, 
+        {
+            "id": "planetlab1.temple.edu_1453826054.rw", 
+            "latitude": 39.9809, 
+            "longitude": -75.157, 
+            "radius": 1363.8584520197367
+        }, 
+        {
+            "id": "planetlab1.diku.dk_1453826344.rw", 
+            "latitude": 55.7014, 
+            "longitude": 12.5612, 
+            "radius": 1571.938085697368
+        }, 
+        {
+            "id": "planetlab1.tsuniv.edu_1453826039.rw", 
+            "latitude": 36.1659, 
+            "longitude": -86.8313, 
+            "radius": 1578.8412015065787
+        }, 
+        {
+            "id": "planetlab3.eecs.umich.edu_1453826041.rw", 
+            "latitude": 42.2944, 
+            "longitude": -83.7126, 
+            "radius": 1591.6612737236844
+        }, 
+        {
+            "id": "pl2.ucs.indiana.edu_1453826043.rw", 
+            "latitude": 39.1708, 
+            "longitude": -86.5372, 
+            "radius": 1598.5643895328944
+        }, 
+        {
+            "id": "planetlab5.eecs.umich.edu_1453826039.rw", 
+            "latitude": 42.2944, 
+            "longitude": -83.7126, 
+            "radius": 1621.246055763158
+        }, 
+        {
+            "id": "planetlab2.uta.edu_1453826045.rw", 
+            "latitude": 32.73, 
+            "longitude": -97.115, 
+            "radius": 1684.3602574473684
+        }, 
+        {
+            "id": "planetlab2.cs.pitt.edu_1453826040.rw", 
+            "latitude": 40.26, 
+            "longitude": -80.0, 
+            "radius": 1736.626705717105
+        }, 
+        {
+            "id": "planetlab1.net.in.tum.de_1453826039.rw", 
+            "latitude": 48.1493, 
+            "longitude": 11.5669, 
+            "radius": 1849.0488774671053
+        }, 
+        {
+            "id": "planetlab2.unr.edu_1453826042.rw", 
+            "latitude": 39.5398, 
+            "longitude": -119.814, 
+            "radius": 1885.5367753157896
+        }, 
+        {
+            "id": "planetlab3.mini.pw.edu.pl_1453826048.rw", 
+            "latitude": 52.2207, 
+            "longitude": 21.0104, 
+            "radius": 1922.0246731644738
+        }, 
+        {
+            "id": "prata.mimuw.edu.pl_1453826039.rw", 
+            "latitude": 52.211, 
+            "longitude": 20.981, 
+            "radius": 2090.6579307894735
+        }, 
+        {
+            "id": "planetlab4.mini.pw.edu.pl_1453826043.rw", 
+            "latitude": 52.2207, 
+            "longitude": 21.0104, 
+            "radius": 2139.965900855263
+        }, 
+        {
+            "id": "planetlab1.unr.edu_1453826042.rw", 
+            "latitude": 39.5398, 
+            "longitude": -119.814, 
+            "radius": 2146.8690166644737
+        }, 
+        {
+            "id": "planetlab1.mini.pw.edu.pl_1453826043.rw", 
+            "latitude": 52.2221, 
+            "longitude": 21.0069, 
+            "radius": 2226.7479281710525
+        }, 
+        {
+            "id": "planetlab1.acis.ufl.edu_1453923792.rw", 
+            "latitude": 29.68, 
+            "longitude": -82.27, 
+            "radius": 2258.3050290131578
+        }, 
+        {
+            "id": "planetlab2.acis.ufl.edu_1453826041.rw", 
+            "latitude": 29.68, 
+            "longitude": -82.27, 
+            "radius": 2318.460752493421
+        }, 
+        {
+            "id": "planetlab2.acis.ufl.edu_1453923780.rw", 
+            "latitude": 29.68, 
+            "longitude": -82.27, 
+            "radius": 2325.3638683026315
+        }, 
+        {
+            "id": "planetlab1.cs.uml.edu_1453826041.rw", 
+            "latitude": 42.6544, 
+            "longitude": -71.3266, 
+            "radius": 2338.1839405197366
+        }, 
+        {
+            "id": "pl1.eecs.utk.edu_1453923856.rw", 
+            "latitude": 35.9483, 
+            "longitude": -83.9367, 
+            "radius": 2634.0317609144736
+        }, 
+        {
+            "id": "planetlab2.cs.uml.edu_1453826039.rw", 
+            "latitude": 42.6544, 
+            "longitude": -71.3266, 
+            "radius": 2672.491977565789
+        }, 
+        {
+            "id": "planetlab1.cs.okstate.edu_1453826041.rw", 
+            "latitude": 36.1222, 
+            "longitude": -97.0714, 
+            "radius": 2764.2048018881574
+        }, 
+        {
+            "id": "planetlab1.unl.edu_1453826040.rw", 
+            "latitude": 40.8, 
+            "longitude": -96.6667, 
+            "radius": 2797.734221532895
+        }, 
+        {
+            "id": "planetlab3.arizona-gigapop.net_1453826049.rw", 
+            "latitude": 32.2333, 
+            "longitude": -110.948, 
+            "radius": 2864.7930608223683
+        }, 
+        {
+            "id": "planetlab5.ie.cuhk.edu.hk_1453826039.rw", 
+            "latitude": 22.3, 
+            "longitude": 114.166, 
+            "radius": 3104.429795342105
+        }, 
+        {
+            "id": "planetlab1.ecs.vuw.ac.nz_1453826042.rw", 
+            "latitude": -41.2902, 
+            "longitude": 174.768, 
+            "radius": 3195.1564602631574
+        }, 
+        {
+            "id": "planetlab1.ie.cuhk.edu.hk_1453826043.rw", 
+            "latitude": 22.3, 
+            "longitude": 114.166, 
+            "radius": 3203.045735473684
+        }, 
+        {
+            "id": "pl3.cs.unm.edu_1453826041.rw", 
+            "latitude": 35.08, 
+            "longitude": -106.65, 
+            "radius": 4179.343542776315
+        }, 
+        {
+            "id": "pl2.cs.unm.edu_1453826041.rw", 
+            "latitude": 35.08, 
+            "longitude": -106.65, 
+            "radius": 4189.205136789473
+        }, 
+        {
+            "id": "planetlab2.citadel.edu_1453826047.rw", 
+            "latitude": 32.7984, 
+            "longitude": -79.9614, 
+            "radius": 4326.281293572368
+        }, 
+        {
+            "id": "pl1.cs.montana.edu_1453826041.rw", 
+            "latitude": 45.6666, 
+            "longitude": -111.049, 
+            "radius": 4979.118817243421
+        }, 
+        {
+            "id": "planetlab3.cslab.ece.ntua.gr_1453826045.rw", 
+            "latitude": 38.0, 
+            "longitude": 23.73, 
+            "radius": 5707.890614815789
+        }
+    ], 
+    "count": 14, 
+    "countGT": 0, 
+    "countTotalNumberOfCircles": 100, 
+    "countVisualisedCircles": 70, 
+    "instances": [
+        {
+            "circle": {
+                "id": "planetlab3.cesnet.cz_1453826038.rw", 
+                "latitude": 50.102, 
+                "longitude": 14.3916, 
+                "numberOfCityInsideTheCircle": 1, 
+                "radius": 63.114201684210535, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Prague", 
+                "city_population": "1165581", 
+                "code_country": "CZ", 
+                "id": "PRG", 
+                "latitude": 50.1007995605, 
+                "longitude": 14.2600002289
+            }
+        }, 
+        {
+            "circle": {
+                "id": "node2.planetlab.mathcs.emory.edu_1453826049.rw", 
+                "latitude": 33.7895, 
+                "longitude": -84.3255, 
+                "numberOfCityInsideTheCircle": 3, 
+                "radius": 84.80970851315789, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Atlanta", 
+                "city_population": "420003", 
+                "code_country": "US", 
+                "id": "FTY", 
+                "latitude": 33.6366996765, 
+                "longitude": -84.4281005859
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab4.inf.ethz.ch_1453826039.rw", 
+                "latitude": 47.3794, 
+                "longitude": 8.54513, 
+                "numberOfCityInsideTheCircle": 5, 
+                "radius": 95.65746192763159, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Zurich", 
+                "city_population": "341730", 
+                "code_country": "CH", 
+                "id": "ZRH", 
+                "latitude": 47.4646987915, 
+                "longitude": 8.5491695404
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab01.cs.washington.edu_1453826047.rw", 
+                "latitude": 47.6531, 
+                "longitude": -122.313, 
+                "numberOfCityInsideTheCircle": 8, 
+                "radius": 105.51905594078946, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Seattle", 
+                "city_population": "608660", 
+                "code_country": "US", 
+                "id": "BFI", 
+                "latitude": 47.5299987793, 
+                "longitude": -122.3020019531
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab2.koganei.itrc.net_1453826049.rw", 
+                "latitude": 35.7, 
+                "longitude": 139.767, 
+                "numberOfCityInsideTheCircle": 9, 
+                "radius": 183.42564864473684, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Tokyo", 
+                "city_population": "8336599", 
+                "code_country": "JP", 
+                "id": "HND", 
+                "latitude": 35.5522994995, 
+                "longitude": 139.7799987793
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab-coffee.ait.ie_1453826039.rw", 
+                "latitude": 53.4187, 
+                "longitude": -7.90557, 
+                "numberOfCityInsideTheCircle": 13, 
+                "radius": 229.77514050657896, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Dublin", 
+                "city_population": "1024027", 
+                "code_country": "IE", 
+                "id": "DUB", 
+                "latitude": 53.4212989807, 
+                "longitude": -6.270070076
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab3.rutgers.edu_1453826038.rw", 
+                "latitude": 40.4896, 
+                "longitude": -74.4082, 
+                "numberOfCityInsideTheCircle": 49, 
+                "radius": 356.00354387499993, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "New York", 
+                "city_population": "8175133", 
+                "code_country": "US", 
+                "id": "JFK", 
+                "latitude": 40.63980103, 
+                "longitude": -73.77890015
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planet2.servers.ua.pt_1453826042.rw", 
+                "latitude": 40.6401, 
+                "longitude": -8.65628, 
+                "numberOfCityInsideTheCircle": 26, 
+                "radius": 583.8063655789473, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Madrid", 
+                "city_population": "3255944", 
+                "code_country": "ES", 
+                "id": "TOJ", 
+                "latitude": 40.4967002869, 
+                "longitude": -3.4458699226
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab2.comp.nus.edu.sg_1453826041.rw", 
+                "latitude": 1.37, 
+                "longitude": 103.8, 
+                "numberOfCityInsideTheCircle": 23, 
+                "radius": 674.5330305, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Singapore", 
+                "city_population": "3547809", 
+                "code_country": "SG", 
+                "id": "SIN", 
+                "latitude": 1.3501900434, 
+                "longitude": 103.9940032959
+            }
+        }, 
+        {
+            "circle": {
+                "id": "ricepl-5.cs.rice.edu_1453826040.rw", 
+                "latitude": 29.7225, 
+                "longitude": -95.3924, 
+                "numberOfCityInsideTheCircle": 54, 
+                "radius": 688.339262118421, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Houston", 
+                "city_population": "2099451", 
+                "code_country": "US", 
+                "id": "IAH", 
+                "latitude": 29.9843997955, 
+                "longitude": -95.3414001465
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab3.hiit.fi_1453923778.rw", 
+                "latitude": 60.1, 
+                "longitude": 25.0, 
+                "numberOfCityInsideTheCircle": 67, 
+                "radius": 759.3427390131579, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "St Petersburg", 
+                "city_population": "5028000", 
+                "code_country": "RU", 
+                "id": "LED", 
+                "latitude": 59.8003005981, 
+                "longitude": 30.2625007629
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab1.cs.ucla.edu_1453826041.rw", 
+                "latitude": 34.0711, 
+                "longitude": -118.442, 
+                "numberOfCityInsideTheCircle": 58, 
+                "radius": 966.4362132894735, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Los Angeles", 
+                "city_population": "3792621", 
+                "code_country": "US", 
+                "id": "CPM", 
+                "latitude": 33.94250107, 
+                "longitude": -118.4079971
+            }
+        }, 
+        {
+            "circle": {
+                "id": "planetlab2.pop-mg.rnp.br_1453826041.rw", 
+                "latitude": -19.9333, 
+                "longitude": -43.95, 
+                "numberOfCityInsideTheCircle": 48, 
+                "radius": 1072.941428631579, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "S\u00e3o Paulo", 
+                "city_population": "10021295", 
+                "code_country": "BR", 
+                "id": "SAO", 
+                "latitude": -23.5090999603, 
+                "longitude": -46.6377983093
+            }
+        }, 
+        {
+            "circle": {
+                "id": "pl1.eng.monash.edu.au_1453826042.rw", 
+                "latitude": -37.9096, 
+                "longitude": 145.133, 
+                "numberOfCityInsideTheCircle": 39, 
+                "radius": 1246.5054832631579, 
+                "ttl": -1
+            }, 
+            "marker": {
+                "city": "Sydney", 
+                "city_population": "4627345", 
+                "code_country": "AU", 
+                "id": "BWU", 
+                "latitude": -33.9244003296, 
+                "longitude": 150.9880065918
+            }
+        }
+    ], 
+    "markerGT": []
+}
