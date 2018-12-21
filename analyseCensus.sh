@@ -67,7 +67,7 @@ main() {
     echo "phase 1: converting the IPs in Long"
     if [ "$(uname)" == "Darwin" ]; then
         # MAC OS
-        ls /tmp/anycastMeas/ | parallel -j $(gnproc) 'python code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
+        ls /tmp/anycastMeas/ | parallel -j $(gnproc) 'python2 code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
         
         echo "phase 2: sorting the Long IPs"
         for file in /tmp/anycastMeasIpLong/*; do 
@@ -75,7 +75,7 @@ main() {
         done;
     else
         #LINUX
-        ls /tmp/anycastMeas/ | parallel --gnu -j $(nproc) 'python code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
+        ls /tmp/anycastMeas/ | parallel --gnu -j $(nproc) 'python2 code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
 
         echo "phase 2: sorting the Long IPs"
         for file in /tmp/anycastMeasIpLong/*; do 
@@ -91,7 +91,7 @@ main() {
 
     echo "phase 3: finding speed of light violation"
     mkdir -p datasets/anycast-measurements-$date 
-    python code/analyseCensus.py datasets/censusData/ datasets/planetlab-vps datasets/anycast-measurements-$date 
+    python2 code/analyseCensus.py datasets/censusData/ datasets/planetlab-vps datasets/anycast-measurements-$date 
     
     echo 'phase 4: running iGreedy on the anycast IPs'
     mkdir -p anycast-results-$date
