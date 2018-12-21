@@ -51,43 +51,43 @@ main() {
     echo "Starting analysing the $month census in the directory: $censusFolder"
     
     #removing tmp directory
-    rm -f -r /tmp/anycastMeas;
-    mkdir /tmp/anycastMeas;
+    rm -f -r $TMPDIR/anycastMeas;
+    mkdir $TMPDIR/anycastMeas;
     #To be safe, we copy the files in a tmp directory.
     echo "phase 0: Copying the data in a tmp directory"
-    cp $(find $censusFolder | grep "\.rw") /tmp/anycastMeas
+    cp $(find $censusFolder | grep "\.rw") $TMPDIR/anycastMeas
 
     #removing tmp directory
-    rm -f -r /tmp/anycastMeasIpLong;
-    mkdir /tmp/anycastMeasIpLong;
+    rm -f -r $TMPDIR/anycastMeasIpLong;
+    mkdir $TMPDIR/anycastMeasIpLong;
     #removing tmp directory
-    rm -f -r /tmp/anycastMeasSorted;
-    mkdir /tmp/anycastMeasSorted;
+    rm -f -r $TMPDIR/anycastMeasSorted;
+    mkdir $TMPDIR/anycastMeasSorted;
 
     echo "phase 1: converting the IPs in Long"
     if [ "$(uname)" == "Darwin" ]; then
         # MAC OS
-        ls /tmp/anycastMeas/ | parallel -j $(gnproc) 'python2 code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
+        ls $TMPDIR/anycastMeas/ | parallel -j $(gnproc) 'python2 code/ip2long.py $TMPDIR/anycastMeas/{} $TMPDIR/anycastMeasIpLong/$(basename {.} )'
         
         echo "phase 2: sorting the Long IPs"
-        for file in /tmp/anycastMeasIpLong/*; do 
-            gsort --parallel=$(gnproc) -n -u $file -o /tmp/anycastMeasSorted/$(basename $file); 
+        for file in $TMPDIR/anycastMeasIpLong/*; do 
+            gsort --parallel=$(gnproc) -n -u $file -o $TMPDIR/anycastMeasSorted/$(basename $file); 
         done;
     else
         #LINUX
-        ls /tmp/anycastMeas/ | parallel --gnu -j $(nproc) 'python2 code/ip2long.py /tmp/anycastMeas/{} /tmp/anycastMeasIpLong/$(basename {.} )'
+        ls $TMPDIR/anycastMeas/ | parallel --gnu -j $(nproc) 'python2 code/ip2long.py $TMPDIR/anycastMeas/{} $TMPDIR/anycastMeasIpLong/$(basename {.} )'
 
         echo "phase 2: sorting the Long IPs"
-        for file in /tmp/anycastMeasIpLong/*; do 
-            sort --parallel=$(nproc) -n -u $file -o /tmp/anycastMeasSorted/$(basename $file); 
+        for file in $TMPDIR/anycastMeasIpLong/*; do 
+            sort --parallel=$(nproc) -n -u $file -o $TMPDIR/anycastMeasSorted/$(basename $file); 
         done;
     fi
 
     #removing tmp directory
     rm -f -r datasets/censusData;
-    mv /tmp/anycastMeasSorted/ datasets/censusData;
-    rm -f -r /tmp/anycastMeas;
-    rm -f -r /tmp/anycastMeasIpLong;
+    mv $TMPDIR/anycastMeasSorted/ datasets/censusData;
+    rm -f -r $TMPDIR/anycastMeas;
+    rm -f -r $TMPDIR/anycastMeasIpLong;
 
     echo "phase 3: finding speed of light violation"
     mkdir -p datasets/anycast-measurements-$date 
